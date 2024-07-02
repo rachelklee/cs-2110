@@ -1,0 +1,19 @@
+Running suite(s): pkmn_gym_suite
+ my_string_suite
+78%: Checks: 76, Failures: 16, Errors: 0
+suites/pkmn_gym_helpers.c:61:F:test_catch_pokemon_basic:test_catch_pokemon_basic:0: catch_pokemon(Trainer Richard {[pikachu, lvl 5], [squirtle, lvl 10]}, snivy, 15) - Expected trainer's (Richard) party size to be 3, was 2
+suites/pkmn_gym_helpers.c:61:F:test_catch_pokemon_null_check:test_catch_pokemon_null_check:0: catch_pokemon(Trainer Vy {[Pichu, lvl 17], [Amogus, lvl 69]}, Catto, 99) - Expected trainer's (Vy) party size to be 3, was 2
+suites/pkmn_gym_suite.c:250:F:test_release_pokemon_null_checks:test_release_pokemon_null_checks:0: Pokemon not released successfully
+suites/pkmn_gym_helpers.c:61:F:test_catch_and_release_coverage_test:test_catch_and_release_coverage_test:0: Trainer Talia did not catch Catto successfully - Expected trainer's (Talia) party size to be 4, was 3
+suites/pkmn_gym_suite.c:415:F:test_count_species_duplicate_species_in_party:test_count_species_duplicate_species_in_party:0: count_species("pikachu") - Expected return value: 4, was: 5
+suites/pkmn_gym_helpers.c:72:F:test_trade_pokemon_basic:test_trade_pokemon_basic:0: trade_pokemon(Trainer Richard {[squirtle, lvl 1], [charmander, lvl 1]}, 1, Trainer Prabhav {[snivy, lvl 15]}, 0) - gym.trainers[0] - trainer.party[1] - Expected pokemon species to be snivy, was charmander
+suites/pkmn_gym_helpers.c:72:F:test_trade_pokemon_coverage:test_trade_pokemon_coverage:0: trade_pokemon(Trainer Richard, 5, Trainer Vy, 0) - gym.trainers[0] - trainer.party[5] - Expected pokemon species to be snorlax, was greninja
+suites/pkmn_gym_suite.c:674:F:test_battle_trainer_basic:test_battle_trainer_basic:0: battle_trainer(Trainer Richard {[squirtle, lvl 1], [charmander, lvl 10], [eevee, lvl 15]}, Trainer Prabhav {[snivy, lvl 15], [pikachu, lvl 9], [magikarp, lvl 50]}) - Expected return value: 1, was: -1
+suites/pkmn_gym_suite.c:706:F:test_battle_trainer_no_pokemon:test_battle_trainer_no_pokemon:0: battle_trainer(Trainer Richard {no pokemon}, Trainer Prabhav {no pokemon}) - Expected return value: 1, was: -1
+suites/pkmn_gym_suite.c:746:F:test_battle_trainer_same_level:test_battle_trainer_same_level:0: battle_trainer(Trainer Richard {4 lvl 10 pokemon}, Trainer Prabhav {4 lvl 10 pokemon}) - Expected return value: 1, was: -1
+suites/pkmn_gym_suite.c:787:F:test_battle_trainer_unequal_party_count:test_battle_trainer_unequal_party_count:0: battle_trainer(Trainer Richard {3 lvl 1 pokemon}, Trainer Prabhav {[magikarp, lvl 90]}) - Expected return value: 0, was: -1
+suites/pkmn_gym_suite.c:828:F:test_battle_trainer_unequal_party_count_lesser_wins:test_battle_trainer_unequal_party_count_lesser_wins:0: battle_trainer(Trainer Richard {3 lvl 1 pokemon}, Trainer Prabhav {2 lvl 90 pokemon}) - Expected return value: 1, was: -1
+suites/pkmn_gym_suite.c:869:F:test_battle_trainer_unequal_party_count_even_tie:test_battle_trainer_unequal_party_count_even_tie:0: battle_trainer(Trainer Richard {4 lvl 1 pokemon}, Trainer Prabhav {[magikarp, lvl 90], [magikarp, lvl 100]}) - Expected return value: 1, was: -1
+suites/pkmn_gym_suite.c:922:F:test_find_champion_basic:test_find_champion_basic:0: Expected returned champion: Henry, was: NULL
+suites/pkmn_gym_suite.c:950:F:test_find_champion_same_wins:test_find_champion_same_wins:0: Expected returned champion: Richard, was: NULL
+suites/pkmn_gym_suite.c:979:F:test_find_champion_no_wins:test_find_champion_no_wins:0: Expected returned champion: Richard, was: NULL
